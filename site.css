@@ -1,0 +1,116 @@
+/*
+    Wilmot.css
+    © 2019 Marquis Kurt. All rights reserved.
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Nunito');
+
+html, body {
+    font-family: 'Merriweather', 'Times New Roman', Times, serif;
+    height: 100%;
+    min-height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Classes for Paper */
+.paper {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 25%;
+    padding-bottom: 25%;
+}
+
+.paper section {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.paper section p {
+    line-height: 2.0em;
+}
+
+/* Paper blockquotes */
+.paper section blockquote {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-style: italic;
+    background-color: #f4f4f4;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 48px;
+    padding-right: 8px;
+    border-left-color: #333;
+    border-left-width: 2px;
+    border-left-style: solid;
+}
+
+/* Paper buttons */
+.paper section .button {
+    background-color: #03b381;
+    color: #fff;
+    border-radius: 3px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-decoration: none;
+    font-family: "Nunito", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 8px;
+}
+
+.paper section .button.fullwidth {
+    width: 100% !important;
+}
+
+/* Specific header fonts*/
+.paper h1, .paper h2, .paper h3, .paper h4, .paper h5, .paper h6 {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Colors for titles and subtitles */
+.paper .title {
+    color: #000;
+}
+
+.paper .subtitle {
+    color: #666;
+    line-height: 0.5em;
+}
+
+/* Paper on smaller devices */
+@media (max-width: 768px) {
+    .paper {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}
+
+/* Paper on devices that are using dark mode */
+@media (prefers-color-scheme: dark) {
+    html, body {
+        background-color: #181b21;
+        color: #edf3ff;
+    }
+
+    .paper .title {
+        color: #fff;
+    }
+
+    .paper .subtitle {
+        color: #999;
+    }
+
+    .paper section blockquote {
+        background-color: #22262e;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 48px;
+        padding-right: 8px;
+        border-left-color: #000;
+        border-left-width: 2px;
+        border-left-style: solid;
+    }
+}
