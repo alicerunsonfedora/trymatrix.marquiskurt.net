@@ -17,10 +17,11 @@ html, body {
 .paper {
     padding-left: 15%;
     padding-right: 15%;
-    padding-top: 25%;
+    padding-top: 10%;
     padding-bottom: 25%;
 }
 
+/* Sections */
 .paper section {
     margin-top: 16px;
     margin-bottom: 16px;
@@ -28,6 +29,45 @@ html, body {
 
 .paper section p {
     line-height: 2.0em;
+}
+
+.paper section img {
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 0 4px #999;
+}
+
+/* See Also section */
+.paper section.see-also {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #f4f4f4;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.paper section.see-also .title {
+    font-weight: 300;
+}
+
+.paper section.see-also .content {
+    text-align: center;
+}
+
+.paper section.see-also .caption {
+    font-family: "Nunito", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    opacity: 0.8;
+}
+
+/* Sources section */
+.paper section.sources {
+    margin-top: 64px;
+}
+
+.paper section.sources .source {
+    padding-left: 1.25em;
+    text-indent: -1.25em;
 }
 
 /* Paper blockquotes */
@@ -46,17 +86,34 @@ html, body {
 }
 
 /* Paper buttons */
+.paper section .buttons {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.paper section .buttons.fullwidth {
+    display: flex;
+    text-align: center;
+}
+
 .paper section .button {
     background-color: #03b381;
     color: #fff;
-    border-radius: 3px;
+    border-radius: 4px;
     padding-left: 24px;
     padding-right: 24px;
     padding-top: 8px;
     padding-bottom: 8px;
     text-decoration: none;
     font-family: "Nunito", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 8px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.paper section .button:hover {
+    background-color: #35C29A;
 }
 
 .paper section .button.fullwidth {
@@ -113,4 +170,19 @@ html, body {
         border-left-width: 2px;
         border-left-style: solid;
     }
+
+    .paper section.see-also {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        background-color: #22262e;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Footer */
+footer {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 16px;
 }
