@@ -7,45 +7,111 @@
         <meta property="og:title" content="Is Matrix the Future of Messaging?"/>
         <meta property="og:type" content="article"/>
         <meta property="og:url" content="https://trymatrix.marquiskurt.net"/>
+        <meta property="og:image" content="https://images.unsplash.com/photo-1521931961826-fe48677230a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"/>
         <link rel="stylesheet" href="site.css"/>
     </head>
     <body>
         <div class="paper">
             <h1 class="title">Is Matrix the Future of Instant Messaging?</h1>
-            <h2 class="subtitle">Test</h2>
+            <h2 class="subtitle">An Analysis of Matrix and its Social Implications in France</h2>
             <section>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum vulputate fringilla. Praesent pharetra nisi vitae velit dignissim egestas. In gravida odio eros, ac tristique risus fringilla nec. Maecenas placerat dapibus nunc sed euismod. Sed tellus ipsum, egestas id bibendum eget, auctor ut risus. Morbi tempor nunc non nisl commodo dignissim. Donec suscipit aliquam posuere. 
-                </p>
-                <img src="uwu.png"/>
+                <img src="https://images.unsplash.com/photo-1521931961826-fe48677230a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="Messaging on Telegram (provided by Unsplash)"/>
+                <p class="caption">Telegram is a popular messaging service that aims to provide privacy and security, but it has its own issues.</p>
             </section>
             <section>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum vulputate fringilla. Praesent pharetra nisi vitae velit dignissim egestas. In gravida odio eros, ac tristique risus fringilla nec. Maecenas placerat dapibus nunc sed euismod. Sed tellus ipsum, egestas id bibendum eget, auctor ut risus. Morbi tempor nunc non nisl commodo dignissim. Donec suscipit aliquam posuere. 
+                    Instant messaging, in its current state, is a bit messy. A lot of people are using (and often juggling between) different centralized services and apps to communicate with family, friends, coworkers, and other people; examples include Facebook Messenger, Android Messages, Skype, and even iMessage. While having a multitude of services isn't inherently bad in and of itself, it presents a lot of issues: data between users is stored and collected onto servers owned by the service provider, which may lead to privacy and backdoor issues such as targeted advertising, third parties using your data for unintended uses, and even tracking from parties or governments. These services also aren't able to communicate between each other as easily, making it difficult to move from service to another. Simply stated, there isn't a viable standard for instant messaging that benefits everyone. How ever, the developers at the Matrix Foundation have been working diligently to solve this issue by creating a new, open, and decentralized standard for instant messaging communications called Matrix, which also provides this ability to bridge between services. Through Matrix's technical capabilities and France's adoption of it as their standard for instant messaging between government departments and to the French public, Matrix will play an important role in the world of instant messaging as the primary standard protocol.
                 </p>
-                <blockquote>
-                    Fall into the hands of sorrow, drawn by the darkest bay.
-                </blockquote>
-                <div class = "buttons">
-                    <a href="#" class="button">Try now</a>
-                </div>
             </section>
+            <a name="decentralized-messaging">
+                <h2>Decentralized messaging as a whole</h2>
+            </a>
+            <section>
+                <p>
+                    In order to really understand what Matrix is and how it works, it is important to understand the basic principles of decentralized instant messaging in general. In "A Distributed Instant Messaging System Model" from the Metallurgical and Mining Industry journal, Hao Zhang, Zhongkui Sun, and He Li describe the properties of this model of instant messaging. First, the authors state that decentralized messaging, at least for two people, will work similarly to regular networks in the sense that data will be sent to the same location (Zhang, Sun, and Li 489). While this point doesn't necessarily paint the entire picture, it does help establish the fact that, at its core, it still remains an easy-to-use system for communicating. When more people join, the only thing that changes is that, instead of one server, there are several that help distribute data.
+                </p>
+                <p>
+                    Second, because having multiple servers distribute data makes transmissions easier, the authors also state that statuses of when people are online and offline are sent to all other networks and computers (Zhang, Sun, and Li 489). This distribution of data and statuses in this manner helps ensure that the messaging network remains online at all times. If a server in this network goes down, all other computers and networks will still retain the status updates, meaning that users will always know when someone is online or offline much more quickly. If a user was waiting for this kind of notification on a centralized server when that service went down, they'd never know because the data wouldn't get transmitted. Although this point strictly applies to offline/online statuses, this structure is also applicable to many other forms of data, such as member counts, files uploaded, time stamps, and typing indicators.
+                </p>
+                <p>
+                    Next, the authors remark that data, in a distributed messaging system, is sent with a common structure that other computers can read (Zhang, Sun, and Li 491). When data is transmitted between networks, it needs to be readable to other computers that are receiving this data; therefore, there must be a common protocol (procedure or system of rules) in place that dictates how this data is read. This is important, especially if users are on different services; this common protocol would let any user from these services to receive and view the data exactly as it was sent, albeit with some user interface changes. This could range from typing indicators to images or videos.
+                </p>
+                <p>
+                    Finally, if two users are on completely different services where the two cannot communicate directly, the authors propose that data can be sent through a Web service (Zhang, Sun, and Li 491). A Web service, in this context, refers to a service on the Internet that data is sent to and then sends to another location. For decentralized messaging, this means that if two computers can't connect to each other in the same network, they can use the service to exchange data more easily. If both users can't connect to each other directly in that network, they can still send and receive messages, though the transmitted data will go to another location first before reaching its destination. In the aforementioned case of users on different services, this can be extremely helpful as some Web services will also translate data to a format the service can read. For instance, if Alice and Bob were messaging each other, but Alice is using Platform X and Bob is using Platform Pro, the Web service would be able to translate Platform X messages into Platform Pro ones and vice versa, meaning that Alice and Bob can still talk to each other without difficulty.
+                </p>
+            </section>
+            <a name="matrix-messaging">
+                <h2>Matrix as a decentralized service</h2>
+            </a>
+            <section>
+                <img src="riot.png" alt="Riot.im, a glossy web client for Matrix"/>
+                <p class="caption">Riot.im is a usable and glossy frontend for Matrix, though other options such as Seaglass and Spectral exist.</p>
+                <p>
+                    Given that a decentralized messaging system adopts all of the standards that Zhang, Sun, and Li have defined, Matrix can be easily classified as a decentralized messaging system thanks to its technical capabilities. According to the official specification, Matrix is "a set of open APIs for open-federated Instant Messaging[... that provides] an open decentralized pubsub layer for [...] publishing/subscribing JSON objects" ("Introduction to Matrix APIs"). Technical jargon aside, the introduction has defined Matrix as the common protocol for transmitting data between computers. Most importantly, they have defined a very common data format to be the basis of the protocol, JSON (JavaScript Object Notation), which is commonly used on the internet to get and post data. Because of how frequent JSON is across the Internet, Matrix is becoming an easily-adoptable protocol that uses open Web standards.
+                </p>
+                <p>
+                    Next, Matrix distributes its offline/online statuses to other computers and servers (called "homeservers" in Matrix). In the "Room structure" section of the specification, Matrix shares this data across networks at different levels: "Federation maintains shared data structures per-room between multiple homeservers". Each chat is located in a room, and homeservers contain a group of rooms; Matrix distributes offline/online states to both the rooms themselves and the whole network. However, Matrix takes it a step further; in the same section, the specifications states that the data is split between message events and state events ("Room structure"). While Matrix adopts the same status distribution, the protocol makes it easier to share those status updates by splitting them into two categories: one for anything relating to messages (eg. new messages, attachments, etc.), and one for the state of the room (eg. who's online/offline, who's typing, etc.).
+                </p>
+                <p>
+                    Finally, Matrix makes use of Web services to submit data when computers don't have a direct connection. Most particularly, Matrix's Web services, often called bridges, are able to translate messages between services as described before. Imagine that Alice is using the gaming chat app Discord and Bob is using Telegram, another instant messenger. Alice and Bob have set up a Matrix room to talk to each other more fluidly, but have added two bridges that translate Discord messages and Telegram messages. Because of the way Matrix translates and sends the data, Alice's Discord messages appear in Bob's Telegram chat, and vice versa. Even if Alice and Bob aren't using Matrix natively, they are still able to communicate with each other thanks to those bridges.
+                </p>
+            </section>
+            <a name="france-uses-matrix">
+                <h2>How is France using Matrix?</h2>
+            </a>
             <section class="see-also">
-                <h2 class="title">See also</h2>
+                <h3 class="title">See also: Matrix in the French State</h3>
                 <div class="content">
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-pKHn0pittY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <video src="https://video.fosdem.org/2019/Janson/matrix_french_state.mp4" controls autoplay="false">
                 </div>
-                <p class="caption">This is a caption to the See-Also.</p>
+                <p class="caption">In the FOSSDEM 2019 conference, Matthew Hodgson, one of Matrix's developers, discusses what Matrix is and how France is implementing it into their government.</p>
+                <div class="buttons">
+                    <a href="https://fosdem.org/2019/schedule/event/matrix_french_state/" class="button" target="_blank" rel="noopener nofollower noreferrer">Learn more</a>
+                </div>
+            </section>
+            <section>
+                <p>
+                    The Matrix protocol, since creation, has received a steady user base, and a few companies have adopted the protocol for their own messaging. Recently, in 2018, DINSIC, the part of the French government responsible for maintaining digital aspects, announced that the government would begin adopting Matrix between departments. In their memo from May 2018, they state that they chose Matrix (albeit a translation) because companies such as Thalès have been using it and that Matrix offers interoperability in an open-source package that DINSIC can contribute to (Wadoux para. 5). As of April 2019, DINSIC released their frontend, Tchat, to government users with their own contributions; Jon Fingas from <em>Engadget</em> sums up these additions in the opening to his article about this release: &quot;All private conversations are encrypted end-to-end, antivirus software screens all attachments and [...] is stored in France&quot; (Fingas para. 1). The antivirus checker is now a part of Matrix's code repositories and end-to-end encryption has been improved significantly.
+                </p>
+                <p>
+                    Although DINSIC has stated that Matrix's usage, as or fight now, is limited to government departments, it does raise a potential future where everyone in the French public could use Matrix and Tchat; moreover, this hypothetical expansion could also increase communication activity between the French government and its people. In a study conducted by The University of Pretoria (South Africa) in Buffalo City, T. Hobololo and T. Mawela analyzed public participation with the municipality and concluded that using mobile phones and texting increased participation. Notably, they discovered that, from citizen feedback, the government would have to look at the needs of the people and focus on efficiency and effectiveness (Hobololo and Mawela 65). From this study, the French government in the hypothetical situation would use Matrix as a means of looking at their citizens' needs and communicating effectively and efficiently.
+                </p>
+            </section>
+            <a name="matrix-boosted">
+                <h2>Matrix's future boosted</h2>
+            </a>
+            <section>
+                <p>
+                    France's adoption of Matrix also sets the stage for Matrix's role in the future as a messaging protocol. In the same memo, DINSIC stated that they used WhatsApp and Telegram before announcing the switch to Matrix (Wadoux para. 2). Both WhatsApp and Telegram come with privacy features, but the companies that run them, namely Facebook and Telegram, have ethically questionable practices in terms of privacy and security. While Matrix adoption in France triumphs another "victory" for open-source software, it also sends a message to companies with messaging services: Matrix should be the protocol for transmitting messages because of its interoperability and privacy-focused features such as decentralization and end-to-end encryption.
+                </p>
+                <p>
+                    Companies such as Facebook, Apple, Google, and Microsoft have the capabilities to create their own messaging services that take advantage of Matrix, though it is unlikely this will occur. For instance, Facebook might not pursue creating a Matrix-based version of Messenger because Matrix's goals may interfere with the company's agenda. If Facebook wanted to add an advertisement module to Matrix, they'd have to write an update to the overall specification and propose it back upstream which might get rejected outright; to counter this, Facebook would most likely create their own version of Matrix with said module, changing the protocol and potentially break compatibility with other Matrix servers.
+                </p>
+            </section>
+            <a name="conclusion">
+                <hr/>
+            </a>
+            <section>
+                <p>
+                    Matrix will inevitably become a primary protocol for messaging because of its quick adoption in France and its technical capabilities such as bridging. Although it is unlikely that it will take off quickly and outright replace all existing services, Matrix's bridging abilities will help provide the transition period the world needs to migrate over to a completely different model of messaging. In a way, Matrix is helping us return to the roots of the internet: decentralized, open, and free; In "The Essence of the Internet", Johnny Ryan describes the internet's inner workings existing as a network because of social reasons: "researchers preferred the idea of a dumb networkcontrolled by a community of computers using a common protocol [... the] decentralized network prioritized survivability  over  other  considerations" (Ryan 39). Given that the internet's creators intended for the network to be decentralized and open to all, Matrix helps pave the way to realizing that potential.
+                </p>
+                <div class="buttons fullwidth">
+                    <a href="https://riot.im/app" class="button fullwidth" target="_blank" rel="noopener nofollower noreferrer">Try Matrix for yourself</a>
+                </div>
             </section>
             <section class="sources">
                 <h2>Sources</h2>
+                <p class="source">“France Launches Government Chat App after Fixing Last-Minute Flaw.” n.d. Engadget. Accessed May 1, 2019. https://www.engadget.com/2019/04/21/france-tchap-government-messaging-app/.</p>
                 <p class="source">Hao Zhang, Zhongkui Sun, He Li, and Jianmin Li. 2015. “A Distributed Instant Messaging System Model.” Metallurgical & Mining Industry, no. 6 (June): 487–94.</p>
+                <p class="source">Hobololo, T. S., and T. Mawela. 2017. “Exploring the Use of Mobile Phones for Public Participation in the Buffalo City Metropolitan Municipality.” Agris On-Line Papers in Economics & Informatics 9 (1): 57–68.</p>
+                <p class="source">“Matrix Specification.” n.d. Accessed March 2, 2019. https://matrix.org/docs/spec/.</p>
+                <p class="source">Ryan, Johnny. 2013. <i>A History of the Internet and the Digital Future</i>. Reprint edition. London: Reaktion Books.</p>
+                <p class="source">Wadoux, Rachel. 2018. “L’État adopte sa propre messagerie instantanée sécurisée,” April 20, 2018. https://matrix.org/blog/wp-content/uploads/2018/04/CP_messagerie_instantanee_Etat.pdf.</p>
             </section>
         </div>
     </body>
-    <!--
    <footer>
-        <p>&copy; 2019 Marquis Kurt. All rights reserved.</p>
+        <p>&copy; 2019 Marquis Kurt. All rights reserved. Proudly written in HTML and CSS.</p>
+        <p>Privacy notice: I haven't implemented anything into this site that might track you, but other services included might. Check those services' privacy policies for more info.</p>
     </footer>
-    -->
 </html>
