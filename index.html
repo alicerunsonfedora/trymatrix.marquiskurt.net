@@ -11,14 +11,25 @@
         <link rel="stylesheet" href="site.css"/>
     </head>
     <body>
-        <div class="paper">
+        <div class="paper-margins">
             <h1 class="title">Is Matrix the Future of Instant Messaging?</h1>
             <h2 class="subtitle">An Analysis of Matrix and its Social Implications in France</h2>
+        </div>
+        <article class="paper">
+            <div class="meta">
+                <h1 class="title">Is Matrix the Future of Instant Messaging?</h1>
+                <h2 class="subtitle">An Analysis of Matrix and its Social Implications in France</h2>
+                <div>
+                    <time datetime="">
+                        
+                    </time>
+                </div>
+            </div>
             <section>
-                <img src="https://images.unsplash.com/photo-1521931961826-fe48677230a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="Messaging on Telegram (provided by Unsplash)"/>
-                <p class="caption">Telegram is a popular messaging service that aims to provide privacy and security, but it has its own issues.</p>
-            </section>
-            <section>
+                <section>
+                    <img src="https://images.unsplash.com/photo-1521931961826-fe48677230a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="Messaging on Telegram (provided by Unsplash)"/>
+                    <p class="caption">Telegram is a popular messaging service that aims to provide privacy and security, but it has its own issues.</p>
+                </section>
                 <p>
                     Instant messaging, in its current state, is a bit messy. A lot of people are using (and often juggling between) different centralized services and apps to communicate with family, friends, coworkers, and other people; examples include Facebook Messenger, Android Messages, Skype, and even iMessage. While having a multitude of services isn't inherently bad in and of itself, it presents a lot of issues: data between users is stored and collected onto servers owned by the service provider, which may lead to privacy and backdoor issues such as targeted advertising, third parties using your data for unintended uses, and even tracking from parties or governments. These services also aren't able to communicate between each other as easily, making it difficult to move from service to another. Simply stated, there isn't a viable standard for instant messaging that benefits everyone. How ever, the developers at the Matrix Foundation have been working diligently to solve this issue by creating a new, open, and decentralized standard for instant messaging communications called Matrix, which also provides this ability to bridge between services. Through Matrix's technical capabilities and France's adoption of it as their standard for instant messaging between government departments and to the French public, Matrix will play an important role in the world of instant messaging as the primary standard protocol.
                 </p>
@@ -30,6 +41,10 @@
                 <p>
                     In order to really understand what Matrix is and how it works, it is important to understand the basic principles of decentralized instant messaging in general. In "A Distributed Instant Messaging System Model" from the Metallurgical and Mining Industry journal, Hao Zhang, Zhongkui Sun, and He Li describe the properties of this model of instant messaging. First, the authors state that decentralized messaging, at least for two people, will work similarly to regular networks in the sense that data will be sent to the same location (Zhang, Sun, and Li 489). While this point doesn't necessarily paint the entire picture, it does help establish the fact that, at its core, it still remains an easy-to-use system for communicating. When more people join, the only thing that changes is that, instead of one server, there are several that help distribute data.
                 </p>
+                <section>
+                    <img src="im-1.png" alt="Diagram modeling how a distributed messaging model would look like."/>
+                    <p class="caption">This diagram from "A Distributed Instant Messaging System Model" helps demonstrate what a distributed model looks like (Zhang, Sun, and Li 491).</p>
+                </section>
                 <p>
                     Second, because having multiple servers distribute data makes transmissions easier, the authors also state that statuses of when people are online and offline are sent to all other networks and computers (Zhang, Sun, and Li 489). This distribution of data and statuses in this manner helps ensure that the messaging network remains online at all times. If a server in this network goes down, all other computers and networks will still retain the status updates, meaning that users will always know when someone is online or offline much more quickly. If a user was waiting for this kind of notification on a centralized server when that service went down, they'd never know because the data wouldn't get transmitted. Although this point strictly applies to offline/online statuses, this structure is also applicable to many other forms of data, such as member counts, files uploaded, time stamps, and typing indicators.
                 </p>
@@ -55,27 +70,41 @@
                 <p>
                     Finally, Matrix makes use of Web services to submit data when computers don't have a direct connection. Most particularly, Matrix's Web services, often called bridges, are able to translate messages between services as described before. Imagine that Alice is using the gaming chat app Discord and Bob is using Telegram, another instant messenger. Alice and Bob have set up a Matrix room to talk to each other more fluidly, but have added two bridges that translate Discord messages and Telegram messages. Because of the way Matrix translates and sends the data, Alice's Discord messages appear in Bob's Telegram chat, and vice versa. Even if Alice and Bob aren't using Matrix natively, they are still able to communicate with each other thanks to those bridges.
                 </p>
+                <section>
+                    <img src="bridges.png" alt="Project Alice's Studio channels in both Matrix and Discord."/>
+                    <p class="caption"><a href="https://about.aliceos.app">Project Alice</a> uses a Discord bridge to connect their Matrix channels and Discord together to let anyone communicate easily.</p>
+                </section>
             </section>
             <a name="france-uses-matrix">
                 <h2>How is France using Matrix?</h2>
             </a>
-            <section class="see-also">
-                <h3 class="title">See also: Matrix in the French State</h3>
-                <div class="content">
-                    <video src="https://video.fosdem.org/2019/Janson/matrix_french_state.mp4" controls autoplay="false">
-                </div>
-                <p class="caption">In the FOSSDEM 2019 conference, Matthew Hodgson, one of Matrix's developers, discusses what Matrix is and how France is implementing it into their government.</p>
-                <div class="buttons">
-                    <a href="https://fosdem.org/2019/schedule/event/matrix_french_state/" class="button" target="_blank" rel="noopener nofollower noreferrer">Learn more</a>
-                </div>
-            </section>
             <section>
+            <section class="see-also">
+                    <h3 class="title">See also: Matrix in the French State</h3>
+                    <div class="content">
+                        <video src="https://video.fosdem.org/2019/Janson/matrix_french_state.mp4" controls autoplay="false">
+                    </div>
+                    <p class="caption">In the FOSSDEM 2019 conference, Matthew Hodgson, one of Matrix's developers, discusses what Matrix is and how France is implementing it into their government (Hodgson 2019).</p>
+                    <div class="buttons">
+                        <a href="https://fosdem.org/2019/schedule/event/matrix_french_state/" class="button" target="_blank" rel="noopener nofollower noreferrer">Learn more</a>
+                    </div>
+                </section>
                 <p>
                     The Matrix protocol, since creation, has received a steady user base, and a few companies have adopted the protocol for their own messaging. Recently, in 2018, DINSIC, the part of the French government responsible for maintaining digital aspects, announced that the government would begin adopting Matrix between departments. In their memo from May 2018, they state that they chose Matrix (albeit a translation) because companies such as Thalès have been using it and that Matrix offers interoperability in an open-source package that DINSIC can contribute to (Wadoux para. 5). As of April 2019, DINSIC released their frontend, Tchat, to government users with their own contributions; Jon Fingas from <em>Engadget</em> sums up these additions in the opening to his article about this release: &quot;All private conversations are encrypted end-to-end, antivirus software screens all attachments and [...] is stored in France&quot; (Fingas para. 1). The antivirus checker is now a part of Matrix's code repositories and end-to-end encryption has been improved significantly.
                 </p>
                 <p>
                     Although DINSIC has stated that Matrix's usage, as or fight now, is limited to government departments, it does raise a potential future where everyone in the French public could use Matrix and Tchat; moreover, this hypothetical expansion could also increase communication activity between the French government and its people. In a study conducted by The University of Pretoria (South Africa) in Buffalo City, T. Hobololo and T. Mawela analyzed public participation with the municipality and concluded that using mobile phones and texting increased participation. Notably, they discovered that, from citizen feedback, the government would have to look at the needs of the people and focus on efficiency and effectiveness (Hobololo and Mawela 65). From this study, the French government in the hypothetical situation would use Matrix as a means of looking at their citizens' needs and communicating effectively and efficiently.
                 </p>
+                <section class="see-also">
+                    <h3 class="title">See also: L’État adopte sa propre messagerie instantanée sécurisée</h3>
+                    <div class="content">
+                        <img src="dinsic.png" alt="PDF preview of L’État adopte sa propre messagerie instantanée sécurisée"/>
+                    </div>
+                    <p class="caption">The Matrix Foundation has made DINSIC's press release about Matrix in France, titled "L’État adopte sa propre messagerie instantanée sécurisée", available for everyone to read (Wadoux).</p>
+                    <div class="buttons">
+                        <a href="https://matrix.org/blog/wp-content/uploads/2018/04/CP_messagerie_instantanee_Etat.pdf" class="button" target="_blank" rel="noopener nofollower noreferrer">Read the press release</a>
+                    </div>
+                </section>
             </section>
             <a name="matrix-boosted">
                 <h2>Matrix's future boosted</h2>
@@ -100,18 +129,21 @@
                 </div>
             </section>
             <section class="sources">
-                <h2>Sources</h2>
+                <a name="sources">
+                    <h2>Sources</h2>
+                </a>
                 <p class="source">“France Launches Government Chat App after Fixing Last-Minute Flaw.” n.d. Engadget. Accessed May 1, 2019. https://www.engadget.com/2019/04/21/france-tchap-government-messaging-app/.</p>
                 <p class="source">Hao Zhang, Zhongkui Sun, He Li, and Jianmin Li. 2015. “A Distributed Instant Messaging System Model.” Metallurgical & Mining Industry, no. 6 (June): 487–94.</p>
+                <p class="source">Hodgson, Matthew. 2019. “Matrix in the French State.” presented at the FOSSDEM, ULB Solbosch Campus, February 2. https://fosdem.org/2019/schedule/event/matrix_french_state/.</p>
                 <p class="source">Hobololo, T. S., and T. Mawela. 2017. “Exploring the Use of Mobile Phones for Public Participation in the Buffalo City Metropolitan Municipality.” Agris On-Line Papers in Economics & Informatics 9 (1): 57–68.</p>
                 <p class="source">“Matrix Specification.” n.d. Accessed March 2, 2019. https://matrix.org/docs/spec/.</p>
                 <p class="source">Ryan, Johnny. 2013. <i>A History of the Internet and the Digital Future</i>. Reprint edition. London: Reaktion Books.</p>
                 <p class="source">Wadoux, Rachel. 2018. “L’État adopte sa propre messagerie instantanée sécurisée,” April 20, 2018. https://matrix.org/blog/wp-content/uploads/2018/04/CP_messagerie_instantanee_Etat.pdf.</p>
             </section>
-        </div>
+        </article>
     </body>
    <footer>
-        <p>&copy; 2019 Marquis Kurt. All rights reserved. Proudly written in HTML and CSS.</p>
+        <p>&copy; 2019 Marquis Kurt. All rights reserved. Proudly written in HTML and CSS. Styles inspired by <a href="https://riot.im/">Riot.im</a>.</p>
         <p>Privacy notice: I haven't implemented anything into this site that might track you, but other services included might. Check those services' privacy policies for more info.</p>
     </footer>
 </html>
