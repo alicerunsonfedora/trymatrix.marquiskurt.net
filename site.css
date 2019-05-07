@@ -196,11 +196,11 @@ a:not(a[name]):not(.button):hover {
         color: #edf3ff;
     }
 
-    .paper .title {
+    .paper-margins .title {
         color: #fff;
     }
 
-    .paper .subtitle {
+    .paper-margins .subtitle {
         color: #999;
     }
 
