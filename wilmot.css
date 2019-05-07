@@ -279,3 +279,10 @@ footer p {
         width: 100%;
     }
 }
+
+/* GitHub banner */
+.github {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
